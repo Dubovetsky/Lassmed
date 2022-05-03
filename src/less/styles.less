@@ -1,0 +1,82 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+
+    .section-1 {
+        height: auto;
+        min-width: 100%;
+        max-width: max-content;
+        background:url(../image/section-1/bg.png);
+        background-size: cover;
+        background-position: 1%;
+        .left-col{
+            margin-top: 5%;
+            padding-bottom: 1%;
+            margin-left: 5%;
+            p {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            h1 {
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 44px;
+            }
+            h2{
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 24px;
+            }
+            .rounded-start {
+                padding-right: 3%;
+            }
+        }
+        .right-col {
+            display: inline-block;
+            vertical-align: bottom;
+            img {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: bottom;
+                max-width: 100%;
+                position: relative;
+            }
+            .img-m {
+                max-width: 71%;
+            }
+        }
+        .img-responsive {
+            display: initial;
+        }
+        @media (min-width: 992px) and (max-width: 1215px) {
+            .left-col {
+                margin-top: -1.5%;
+                padding-top: 1.5%;
+            }
+        }
+        @media (max-width: 991px) {
+            background:#FAD630;
+            padding-bottom: 5%;
+            text-align: center;
+            display: block;
+            .desktop-hidden{
+                display: none;
+            }
+            .right-col { 
+            padding-top: 1%;
+            }
+        }
+        @media (min-width: 992px) {
+            .mobile-hidden{
+                display: none;
+            }
+        }
+    }
+
+}
