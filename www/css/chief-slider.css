@@ -16,7 +16,7 @@
 }
 
 .slider__wrapper {
-  /*overflow: hidden;*/
+  overflow: hidden;
   padding: 1%;
 }
 
@@ -38,19 +38,17 @@
 /* кнопки влево и вправо */
 
 .slider__control {
-  position: absolute;
+  /* position: absolute; */
   top: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 40px; */
   width: 35px;
   border-radius: 5px;
   color: #fff;
   text-align: center;
   height: 50px;
   transform: translateY(-50%);
-  /* background: rgba(0, 0, 0, 0.2); */
   background: rgba(250, 214, 48, 0.7);
 }
 
@@ -95,7 +93,7 @@
 /* индикаторы */
 
 .slider__indicators {
-  position: absolute;
+  /* position: absolute; */
   right: 0;
   bottom: 0;
   left: 0;
@@ -113,13 +111,13 @@
 .slider__indicators li {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  /* background-color: rgba(255, 255, 255, 0.5); */
   background-color: rgba(2, 2, 2, 0.5);
   background-clip: padding-box;
   border-top: 15px solid transparent;

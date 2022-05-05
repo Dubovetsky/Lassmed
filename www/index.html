@@ -6,7 +6,18 @@
 		<meta content='true' name='HandheldFriendly'/>
 		<meta content='width' name='MobileOptimized'/>
 		<meta content='yes' name='apple-mobile-web-app-capable'/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/chief-slider.css">
+		<script src="js/accordion.js"></script>
+		<script defer src="js/chief-slider.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+			  	new ChiefSlider('.slider-1', {
+					loop: true
+			  	});
+			});
+		</script>
         <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -18,8 +29,8 @@
             <!-- Header -->
             <header class="row">
 				<nav class="navbar navbar-default navbar-top navbar-shrink">
-					<div class="">
-						<div class="logo col-md-6">
+					<div class="container">
+						<div class="col-md-6 logo">
 							<a href="#"class=""><img src="image/header/header-logo.png" class="img-responsive" alt="logo header"></a>
 						</div>
 						<div class="navbar-header page-scroll">
@@ -36,13 +47,13 @@
 									<a href="#page-top"></a>
 								</li>
 								<li class="">
-									<a class="page-scroll" href="#hemsida">Hemsida</a>
+									<a class="page-scroll nav-custom" href="#hemsida">Hemsida</a>
 								</li>
 								<li class="">
-									<a class="page-scroll" href="#distrikten">Distrikten</a>
+									<a class="page-scroll nav-custom" href="#distrikten">Distrikten</a>
 								</li>
 								<li class="">
-									<a class="page-scroll" href="#kontakt">Kontakt</a>
+									<a class="page-scroll nav-custom" href="#kontakt">Kontakt</a>
 								</li>
 							</ul>
 						</div>
@@ -55,14 +66,16 @@
 
             <!-- Section 1 -->
             <div class="section-1 row">
-				<div class="col-md-8 left-col">
-					<h1>Electric</h1>
-					<p>Toilette verstopft? Waschbecken undicht? Rohrreinigung benötigen? Unsere Klempner sind 24/7 für Sie da! Rufen Sie </p>
-					<h2>Festpreis ab 48 €</h2>
-					<p><img src="image/section-1/vector.png" class="img-fluid rounded-start" alt="...">24 Stunden Notdienst Service</p>
-					<p><img src="image/section-1/vector.png" class="img-fluid rounded-start" alt="...">Schnell zu günstigen Festpreisen</p>
-					<p><img src="image/section-1/vector.png" class="img-fluid rounded-start" alt="...">Keine versteckten Kosten</p>
-					<button type="button" class="btn btn-primary">8 800 800 80 80</button>
+				<div class="col-md-14 left-col">
+					<div class="bg-wrapper">
+						<h1>Låssmed Stockholm</h1>
+						<p>En nödlåssmedstjänst nära dig hjälper dig om du är låst, dörren är trasig eller du har tappat bort dina nycklar.</p>
+						<p><img src="image/section-1/vector.png" class="img-fluid rounded-start" alt="...">24/7, 365 dagar om året</p>
+						<p><img src="image/section-1/vector.png" class="img-fluid rounded-start" alt="...">Vi kommer om 20 minuter</p>
+						<p><img src="image/section-1/vector.png" class="img-fluid rounded-start" alt="...">Från 299 SEK</p>
+						<button type="button" class="btn btn-primary">[phone]</button>
+					</div>
+					
 				</div>
 				<div class="col-md-14 right-col desktop-hidden">
 					<img src="image/section-1/image.png" alt="image">
@@ -71,41 +84,81 @@
 					<img src="image/section-1/image-mobile.png" class="img-responsive img-m" alt="image">
 				</div>
 			</div>    
-                     
-			<div class="section-2">
-				<div class="row cards">
-					<a href="#" class="col-md-7 card">
+            
+			<!-- Section 2 -->
+			<div class="section-2 row">
+				<div class="cards">
+					<a href="#" class="col-md-7 card sm-card">
 						<div class="icons icon-1"></div>
-						<h5>Billig Låssmed</h5>
-						<p>Överkomliga priser för tjänster, en professionell låssmeds avgång kostar från 299 SEK, utan extra överbetalningar och avgifter.</p>
+						<div class="content">
+							<h5>Billig Låssmed</h5>
+							<p>Överkomliga priser för tjänster, en<br>
+								professionell låssmeds avgång<br>
+								kostar från 299 SEK, utan extra<br>
+								överbetalningar och avgifter.</p>
+						</div>
 					</a>
-					<a href="#" class="col-md-7 card">
+					<a href="#" class="col-md-7 card md-card">
 						<div class="icons icon-2"></div>
-						<h5>24/7, 365 dagar</h5>
-						<p>Specialister kommer snabbt om 20 minuter, vi jobbar dygnet runt utan avbrott. Våra mästare kommer snabbt och effektivt att utföra sitt arbete på kort tid.</p>
+						<div class="content">
+							<h5>24/7, 365 dagar</h5>
+							<p>Specialister kommer snabbt om 20<br>
+								minuter, vi jobbar dygnet runt utan<br>
+								avbrott. Våra mästare kommer<br>snabbt och effektivt att utföra sitt<br>
+								arbete på kort tid.</p>
+						</div>						
 					</a>
-					<a href="#" class="col-md-7 card">
+					<a href="#" class="col-md-7 card sm-card">
 						<div class="icons icon-3"></div>
-						<h5>Kvalitetssäkring</h5>
-						<p>Vi har redan hjälpt mer än 700 kunder med att öppna dörrar, reparera ett lås eller en nyckel som fastnat i ett nyckelhål. Vår 16 års erfarenhet föreslår en lösning på alla problem.</p>
+						<div class="content">
+							<h5>Kvalitetssäkring</h5>
+							<p>Vi har redan hjälpt mer än 700<br>
+								kunder med att öppna dörrar,<br>
+								reparera ett lås eller en nyckel som<br>
+								fastnat i ett nyckelhål. Vår 16 års<br>
+								erfarenhet föreslår en lösning på<br>
+								alla problem.</p>
+						</div>
 					</a>
 				</div>
 			</div>
             
+			<!-- Section 3 -->
 			<div class="section-3 row">
-				<div class="col-md-10 left-col desktop-hidden">
-					<img src="image/section-10/image.png"  alt="image">
+				<div class="col-md-12 left-col desktop-hidden">
+					<img class="main-img" src="image/section-3/image.png"  alt="image">
+					<div class="module-wrapper">
+						<div class="col-md-12 module-l">
+							<img src="image/section-3/icon-1.svg" alt="image">
+							<div class="content">
+								<h3>34+</h3>
+								<p>kompetenta låssmeder</p>
+							</div>
+						</div>
+						<div class="col-md-12 module-r">
+							<img src="image/section-3/icon-2.svg" alt="image">
+							<div class="content">
+								<h3>700+</h3>
+								<p>nöjda kunder</p>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="right-col col-md-12">
+				<div class="right-col col-md-10">
 					<p class="heading">Om oss</p>
 					<h4>En liten berättelse om mig själv</h4>
-					<p>Vi erbjuder varierade tjänster inom låsjour och låssmed i bland annat Kungsholmen, Stockholm, Östermalm, Solna, Sundbyberg, Botkyrka och alla andra områden i och runt Stockholm. Vid kontakt brukar vår låssmed vara på plats hos kunden inom ca. 10-20 minuter beroende på position. Våra låsexperter erbjuder er en snabb och effektiv hjälp med ert lås, så att ni slipper höga kostnader och långa väntetider. Vår låsjour är aktiv dygnet runt.</p>
+					<p>Vi erbjuder varierade tjänster inom låsjour och låssmed i bland annat Kungsholmen,
+						Stockholm, Östermalm, Solna, Sundbyberg, Botkyrka och alla andra områden i och runt Stockholm. 
+						Vid kontakt brukar vår låssmed vara på plats hos kunden inom ca. 10-20 minuter beroende på position. 
+						Våra låsexperter erbjuder er en snabb och effektiv hjälp med ert lås, så att ni slipper höga 
+						kostnader och långa väntetider. Vår låsjour är aktiv dygnet runt.</p>
 				</div>
 				<div class="col-md-8 left-col mobile-hidden">
-					<img src="image/section-10/image.png"  class="img-responsive" alt="image">
+					<!-- <img src="image/section-3/image.png"  class="img-responsive" alt="image"> -->
 				</div>
 			</div>
             
+			<!-- Section 4 -->
 			<div class="section-4 row">
 				<div class="jumbotron jumbotron-fluid">
 					<div class="container">
@@ -114,45 +167,62 @@
 							<p class="lead">Specialister kommer om 20 minuter!</p>
 						</div>
 						<div class="right-col col-md-6">
-							<button type="button" class="btn btn-primary">[phone]</button>
+							<button type="button" class="btn btn-primary btn-custom">[phone]</button>
 						</div>
 					</div>
 				</div>
 			</div>
             
+			<!-- Section 5 cards other -->
             <div class="section-5">
-				<h5>What we offer</h5>
-				<h3>Services without limits</h3>
 				<div class="row cards">
+					<div class="col-md-7 no-card">
+						<h5>Hur vi arbetar</h5>
+						<h4>5 enkla steg för att hjälpa dig</h4>
+						<p>Nu kommer vi att berätta hur processen0 generellt är uppbyggd när du arbetar med var och en av våra kunder, 
+							så att du har en fullständig förståelse och förtroende för oss som kompetenta specialister.</p>	
+						</div>
 					<a href="#" class="col-md-7 card">
-						<div class="icons icon-1"></div>
-						<h5>Service & Repairs</h5>
-						<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
+						<div class="icons icon-4"></div>
+						<div class="content">
+							<h5>Ni kontaktar oss</h5>
+							<p>Ni kontaktar vår låssmed via telefon. Tänk på att beskriva problemet noggrant så att vi vet 
+								vilka låsjour tjänster ni behöver. Ni kan nå vår låsjour dygnet runt.</p>	
+						</div>
 					</a>
 					<a href="#" class="col-md-7 card">
-						<div class="icons icon-2"></div>
-						<h5>Service & Repairs</h5>
-						<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
+						<div class="icons icon-5"></div>
+						<div class="content">
+							<h5>Insamling av information</h5>
+							<p>Vi diskuterar snabbt er situation med vår erfarna låssmed, som sedan ger sig av mot er för att öppna upp ert lås. 
+								Om 20 minuter kommer en specialist till dig.</p>	
+						</div>
 					</a>
-					<a href="#" class="col-md-7 card">
-						<div class="icons icon-3"></div>
-						<h5>Service & Repairs</h5>
-						<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
+				</div>
+				<div class="row cards">
+					<a href="#" class="col-md-7 card mobile-hidden">
+						<div class="icons icon-6"></div>
+						<div class="content">
+							<h5>Inspektion och öppning av låset</h5>
+							<p>Våra låsexperter behandlar ert lås varaktigt, för att undvika onödiga skador och kostnader för er.
+								 Er upplåsning går till snabbt och enkelt.</p>	
+						</div>
 					</a>
 					<a href="#" class="col-md-7 card mobile-hidden">
-						<div class="icons icon-1"></div>
-						<h5>Service & Repairs</h5>
-						<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
+						<div class="icons icon-7"></div>
+						<div class="content">
+							<h5>Installation av nytt lås</h5>
+							<p>Har ert lås gått sönder eller vill ni kanske byta lås helt och hållet? Våra låsexperter ordnar ett högkvalitativt 
+								lås som passar för de säkerhetskrav och behov som ni har.</p>	
+						</div>
 					</a>
 					<a href="#" class="col-md-7 card mobile-hidden">
-						<div class="icons icon-2"></div>
-						<h5>Service & Repairs</h5>
-						<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-					</a>
-					<a href="#" class="col-md-7 card mobile-hidden">
-						<div class="icons icon-3"></div>
-						<h5>Service & Repairs</h5>
-						<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
+						<div class="icons icon-8"></div>
+						<div class="content">
+							<h5>Betala efter resultat</h5>
+							<p>Nu kan ni öppna dörren som vanligt och använda låset igen, grattis! Kostnaden för upplåsningen 
+								beror på svårighetsgraden och tiden som krävs.</p>	
+						</div>
 					</a>
 				</div>
 				<div class="button-bottom">
@@ -160,90 +230,150 @@
 				</div>
 			</div>
             
-            <div class="section-6 row">
+			<!-- Section 6 -->
+            <div class="section-6-top row">
 				<div class="col-md-14 left-col">
-					<p class="heading">About Us</p>
-					<h4>We Are A Professional Creative Agency</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi. Aliquam maximus maximus velit, id scelerisque urna elemLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi. Aliquam maximus maximus velit, id scelerisque urna elemLorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi. Aliquam maximus maximus velit, id scelerisque urna elemLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a in ipsum. Vivamus vel molestie nisi. Aliquam maximus maximus velit, id scelerisque urna elemLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a in ipsum. Vivamus vel dolor sit amet, consectetur adipiscing elit. Duis at est id leo luctus gravida a in ipsum. Vivamus vel</p>
+					<p class="heading">Våra tjänster</p>
+					<h4>Vad är vi villiga att göra</h4>
+					<p>Vår erfarenhet och kompetens - din garanti för en professionell och effektiv service. 
+						Våra ambulerande erfarna låssmeder är snabbt på plats var du än bor i hela Stockholm med omgivning 
+						(och vi har ingen jour eller extra framkörningsavgift), ring låssmed Stockholm, vi är snabbt på plats 
+						var du än bor. Även uppdrag utanför Stockholm, fråga efter offert, hela Stockholmsområdet.</p>
+					<div class="card ">
+						<div class="row">
+						  	<div class="col-md-3 icon">
+								<img src="image/section-6/icon.png" class="img-fluid rounded-start" alt="...">
+						  	</div>
+						  	<div class="">
+								<div class="card-body">
+							  		<h5 class="card-title">Dörröppning</h5>
+								</div>
+						  	</div>
+						</div>
+					</div>
+					<div class="card ">
+						<div class="row">
+						  	<div class="col-md-3 icon">
+								<img src="image/section-6/icon.png" class="img-fluid rounded-start" alt="...">
+						  	</div>
+						  	<div class="">
+								<div class="card-body">
+							 		<h5 class="card-title">Låsbyte</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card ">
+						<div class="row">
+						  	<div class="col-md-3 icon">
+								<img src="image/section-6/icon.png" class="img-fluid rounded-start" alt="...">
+						  	</div>
+						  	<div class="">
+								<div class="card-body">
+							 		<h5 class="card-title">Inbrottssäkring</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card ">
+						<div class="row">
+						  	<div class="col-md-3 icon">
+								<img src="image/section-6/icon.png" class="img-fluid rounded-start" alt="...">
+						  	</div>
+						  	<div class="">
+								<div class="card-body">
+							 		<h5 class="card-title">Låsbyte</h5>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-md-8 right-col mobile-hidden">
 					<img src="image/section-6/image.png" class="img-responsive" alt="image">
+					<div class=" col-md-7 module-over">
+						<div class="text-bg">
+							<p>Snabb Service Dygnet Runt Alla Dagar!<br> Vi är hos dig inom 20 - 30 minuter!<br> Bästa kvalitet till lågt pris!</p>
+						</div>
+					</div>
 				</div>
-				<div class="col-md-8 right-col desktop-hidden">
-					<img src="image/section-6/image.png" alt="image">
+				<div class="col-md-10 right-col desktop-hidden">
+					<img src="image/section-6/image.png"  alt="image">
+					<div class=" col-md-18 module-over">
+						<div class="text-bg">
+							<img src="image/section-6/v-line.png">
+							<p>Snabb Service Dygnet Runt Alla Dagar!<br> Vi är hos dig inom 20 - 30 minuter!<br> Bästa kvalitet till lågt pris!</p>
+						</div>
+					</div>
 				</div>
 			</div>
+			<hr>
+			<div class="section-6-bottom row">
+				<img class="img-b" src="image/section-6/trademark-1.png" alt="...">
+				<img class="img-c" src="image/section-6/trademark-2.png" alt="...">
+				<img class="img-d" src="image/section-6/trademark-1.png" alt="...">
+				<img class="img-e" src="image/section-6/trademark-2.png" alt="...">
+				<img class="img-f" src="image/section-6/trademark-1.png" alt="...">
+			</div>
             
+			<!-- Section 7 slider-->
 			<div class="section-7">
 				<div class="container">
-					<h1>What They Say</h1>
 					<div class="slider-1 slider">
+						<h1 class="text-grid">Recensioner</h1>   
 					  	<div class="slider__wrapper">
 							<div class="slider__items">
 								<div class="slider__item">
 									<div class="col-md-18 card">
-										<img src="image/section-11/girl.png">
-										<h5>Service & Repairs</h5>
-										<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-										<h6>24.05.21</h6>
+										<img src="image/section-7/image-1.png">
+										<h5>Gustav Olofsson</h5>
+										<h6>Moscow</h6>
+										<p>Utelåst....Kort inställelsetid, proffsigt och trevligt bemötande, 
+											arbetade snabbt och visste exakt vad som behövde göras. Förklarade 
+											vad som gjorts och hur allt fungerade. Hjälpte dessutom till med ett 
+											annat problem trots tidsbrist.</p>
 									</div>
 								</div>
 								<div class="slider__item">
 									<div class="col-md-18 card">
-										<img src="image/section-11/boy.png">
-										<h5>Service & Repairs</h5>
-										<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-										<h6>24.05.21</h6>
+										<img src="image/section-7/image-2.png">
+										<h5>Inga Persson</h5>
+										<h6>Stockholm</h6>
+										<p>Fantastisk service! Jag blev utelåst i trapphuset utan skor eller 
+											tröja och i lägenheten fanns min lilla valp. Eyal kom väldigt snabbt 
+											och fick upp dörren. Rekommenderas!</p>
 									</div>
 								</div>
 								<div class="slider__item">
 									<div class="col-md-18 card">
-										<img src="image/section-11/girl.png">
-										<h5>Service & Repairs</h5>
-										<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-										<h6>24.05.21</h6>
-									</div>
-								</div>
-								<div class="slider__item">
-									<div class="col-md-18 card">
-										<img src="image/section-11/boy.png">
-										<h5>Service & Repairs</h5>
-										<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-										<h6>24.05.21</h6>
-									</div>
-								</div>
-								<div class="slider__item">
-									<div class="col-md-18 card">
-										<img src="image/section-11/girl.png">
-										<h5>Service & Repairs</h5>
-										<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-										<h6>24.05.21</h6>
-									</div>
-								</div>
-								<div class="slider__item">
-									<div class="col-md-18 card">
-										<img src="image/section-11/boy.png">
-										<h5>Service & Repairs</h5>
-										<p>Sodales molestie bibendum faucibus amet lobortis nunc nullam dignissim suscipit dictum fermentum</p>
-										<h6>24.05.21</h6>
+										<img src="image/section-7/image-3.png">
+										<h5>Mira Hardson</h5>
+										<h6>Moscow</h6>
+										<p>There are many variations of passages of lorem ipsum available but the majority 
+											have suffered alteration in some form, by injected humour, or randomised words 
+											which don't look even slightly believable.</p>
 									</div>
 								</div>
 							</div>
 					  	</div>
-					  	<a href="#" class="slider__control" data-slide="prev"></a>
-					  	<a href="#" class="slider__control" data-slide="next"></a>
+						<!-- <a href="#" class="slider__control prev-grid" data-slide="prev"></a>
+						<a href="#" class="slider__control next-grid" data-slide="next"></a>   -->
+						<ol class="slider__indicators ind-grid">
+							<li data-slide-to="0"></li>
+							<li data-slide-to="1"></li>
+							<li data-slide-to="2"></li>
+						</ol>
 					</div>
 				</div>
-			</div>
 
+			<!-- Section 8 accordion-->
 			<div class="section-8">
 				<div class="accordion">
 					<div class="accordion__item">
 					  	<div class="accordion__header">
-							<img src="image/section-12/icon-left.png">
+							<img src="image/section-8/icon-left.png">
 							<h2>Lorem ipsum dolor sit amet?</h2>
-							<img src="image/section-12/icon-right-before.png" class="icon-before">
-							<img src="image/section-12/icon-right-after.png" class="icon-after">
+							<img src="image/section-8/icon-right-before.png" class="icon-before">
+							<img src="image/section-8/icon-right-after.png" class="icon-after">
 					  	</div>
 					  	<div class="accordion__body">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .</p>
@@ -251,10 +381,10 @@
 					</div>
 					<div class="accordion__item accordion__item_show">
 						<div class="accordion__header">
-							<img src="image/section-12/icon-left.png">
+							<img src="image/section-8/icon-left.png">
 							<h2>Lorem ipsum dolor sit amet?</h2>
-							<img src="image/section-12/icon-right-before.png" class="icon-before">
-							<img src="image/section-12/icon-right-after.png" class="icon-after">
+							<img src="image/section-8/icon-right-before.png" class="icon-before">
+							<img src="image/section-8/icon-right-after.png" class="icon-after">
 						</div>
 						<div class="accordion__body">
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .</p>
@@ -262,10 +392,10 @@
 				  	</div>
 					<div class="accordion__item">
 					  	<div class="accordion__header">
-							<img src="image/section-12/icon-left.png">
+							<img src="image/section-8/icon-left.png">
 							<h2>Lorem ipsum dolor sit amet?</h2>
-							<img src="image/section-12/icon-right-before.png" class="icon-before">
-							<img src="image/section-12/icon-right-after.png" class="icon-after">
+							<img src="image/section-8/icon-right-before.png" class="icon-before">
+							<img src="image/section-8/icon-right-after.png" class="icon-after">
 					  	</div>
 					  	<div class="accordion__body">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .</p>
@@ -273,10 +403,10 @@
 					</div>
 					<div class="accordion__item">
 					  	<div class="accordion__header">
-							<img src="image/section-12/icon-left.png">
+							<img src="image/section-8/icon-left.png">
 							<h2>Lorem ipsum dolor sit amet?</h2>
-							<img src="image/section-12/icon-right-before.png" class="icon-before">
-							<img src="image/section-12/icon-right-after.png" class="icon-after">
+							<img src="image/section-8/icon-right-before.png" class="icon-before">
+							<img src="image/section-8/icon-right-after.png" class="icon-after">
 					  	</div>
 					  	<div class="accordion__body">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .</p>
@@ -284,10 +414,10 @@
 					</div>
 					<div class="accordion__item">
 					  	<div class="accordion__header">
-							<img src="image/section-12/icon-left.png">
+							<img src="image/section-8/icon-left.png">
 							<h2>Lorem ipsum dolor sit amet?</h2>
-							<img src="image/section-12/icon-right-before.png" class="icon-before">
-							<img src="image/section-12/icon-right-after.png" class="icon-after">
+							<img src="image/section-8/icon-right-before.png" class="icon-before">
+							<img src="image/section-8/icon-right-after.png" class="icon-after">
 					  	</div>
 					  	<div class="accordion__body">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .</p>
@@ -301,46 +431,66 @@
 		 		</script>
 			</div>
 
-            <div>MAP</div>
+			<!-- Section 9 -->
+            <div>
+				<div id="map" style="width:100%;height:400px;"></div>
+			</div>
 
+			<!-- Footer -->
 			<footer>
 				<div class="row foot-main">
-					<div class="col-md-6">
-						<img src="image/footer/logo.png" class="img-responsive">
-						<h2 class="mobile-hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunLorem ipsum dolor sit amet, conse</h2>
+					<div class="col-md-11">
+						<!-- <img src="image/footer/logo.png" class="img-responsive"> -->
+						<h1>LOGO</h1>
+						<h3 class="p-sm"><img src="image/footer/icon-phone.png"><a href="#"> [phone] </a></h3>
+						<h3 class="p-sm"><img src="image/footer/icon-mail.png"><a href="#"> info@[domain] </a></h3>
 					</div>
 					<div class="col-md-6 desktop-hidden">
-						<p><a href="#"><img src="image/footer/icon-phone.png">020 3026 6497 </a></p>
-						<p class="p-s"><a href="#"><img src="image/footer/icon-mail.png">info@electric-24.co.uk</a></p>
-						<p class="p-s"><a href="#"><img src="image/footer/icon-geo.png">Genslerstraße 117, 10787 Berlin</a></p>
+						<h3 class="p-sm"><a href="#"><img src="image/footer/icon-phone.png"> [phone] </a></h3>
+						<h3 class="p-sm"><a href="#"><img src="image/footer/icon-mail.png"> info@[domain] </a></h3>
 					</div>
-					<div class="col-md-6">
-						<h1>Menu:</h1>
-						<p><a href="#">Home</a></p>
-						<p><a href="#">About us</a></p>
-						<p><a href="#">All services</a></p>
-						<p><a href="#">Contact</a></p>
-						<p><a href="#">Contact</a></p>
+					<div class="col-md-3">
+						<h2>Vårt kontor:</h2>
+						<h3><a href="#">Hemsida</a></h3>
+						<h3><a href="#">Om oss</a></h3>
+						<h3><a href="#">Distrikten</a></h3>
+						<h3><a href="#">Kontakt</a></h3>
 					</div>
-					<div class="col-md-6">
-						<h1>Elektriker services:</h1>
-						<p><a href="#">Elektroinstallation</a></p>
-						<p><a href="#">Kabel Erdung</a></p>
-						<p><a href="#">Alarmanlage Montage</a></p>
-						<p><a href="#">Anschluss von Elektrogeräten</a></p>
-						<p><a href="#">Elektrogeräte Reparatur</a></p>	
-					</div>
-					<div class="col-md-6 mobile-hidden">
-						<p><img src="image/footer/icon-phone.png"><a href="#">  020 3026 6497 </a></p>
-						<p class="p-s"><img src="image/footer/icon-mail.png"><a href="#">  info@electric-24.co.uk</a></p>
-						<p class="p-s"><img src="image/footer/icon-geo.png"><a href="#">  Genslerstraße 117, 10787 Berlin</a></p>
+					<div class="col-md-7 mobile-hidden">
+						<p class="mobile-hidden">Vi arbetar med alla sorters låssmedstjänster inom Stockholm och närliggande områden. 
+							Trygghet, kvalitet och säkerhet är våra fokus. Vi kommer inom 20 minuter för att hjälpa till att lösa eventuella
+							 problem, oavsett om det är en trasig nyckel i låset, ett fel på dörrmekanismen eller låsta dörrar. Ring oss nu!</p>
 					</div>
 				</div>
 				<div class="foot-bottom">
-					<h2>&#169 2021 Lorem ipsum dolor</h2>
+					<p>&#169 2022 [domain]</p>
 				</div>
 			</footer>
- 
         </div>
+
+		<!-- Scripts -->
+		<script>
+			function myMap() {
+			  var mapCanvas = document.getElementById("map");
+			  var mapOptions = {
+				center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+			  };
+			  var map = new google.maps.Map(mapCanvas, mapOptions);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR8P72HMX3zllKeeZt8X89dJWMEu0LSX8&callback=myMap" async defer></script>
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/bootstrap.min.js"></script>
+		<!-- Plugin JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/classie.js"></script>
+		<script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/cbpAnimatedHeader.js"></script>
+		<!-- Contact Form JavaScript -->
+		<script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/jqBootstrapValidation.js"></script>
+		<script src="https://raw.githubusercontent.com/IronSummitMedia/startbootstrap/gh-pages/templates/agency/js/contact_me.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
     </body>
 </html>
