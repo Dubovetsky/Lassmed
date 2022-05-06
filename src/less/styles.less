@@ -322,7 +322,7 @@ body {
             .right-col { 
             padding-top: 1%;
             .img-m {
-                max-width: 100%;
+                max-width: 80%;
             }
             }
             .left-col {
@@ -343,6 +343,10 @@ body {
 
 // Section 2 cards
     .section-2 {
+        @media (max-width: 991px) {
+            margin-bottom: -15%;
+            margin-left: 1%;
+        }
         padding: 40px 10px 40px 10px;
         display: flex;
         padding-bottom: 17%;
@@ -355,11 +359,20 @@ body {
             text-align: center;
             min-height: 334px;
             margin-top: -8%;
+            @media (min-width: 1090px) {
+                height: 20%;
+            }
+            @media (min-width: 992px){
+                height: 114%;
+            }
         }
         .md-card {
             text-align: center;
             min-height: 369px;
             margin-top: -10.8%;
+            @media (min-width: 992px) and (max-width: 1112px) {
+                height: 120%;
+            }
         }
         .left-col{
             padding-left: 5%;
@@ -454,9 +467,6 @@ body {
             .main-img {
                 width: 100%;
             }
-            .module-wrapper {
-                padding-top: 5%;
-            }
             .module-wrapper, .module-l, .module-r {
                 display: flex;
                 .content {
@@ -466,6 +476,10 @@ body {
                 p {
                     max-width: 20rem;
                 }
+            }
+            .module-r, .module-l {
+                height: 60%;
+                margin-top: 10%;
             }
         }
         .right-col {
@@ -505,9 +519,14 @@ body {
                 max-width: 100%;
                 img {
                     margin-top: 25%;
+                    margin-left: 9%;
                 }
             }
             .right-col {
+                .text {
+                    margin-left: 2%;
+                }
+                margin-right: 0;
                 text-align: center;
             }
             .mobile-hidden {
@@ -553,6 +572,15 @@ body {
         }
         .line {
             border-bottom: solid 4px #00c170;
+            @media (min-width: 1315px) {
+                height: 300px;              
+            }
+            @media (min-width:1020px) and (max-width: 1314px) {
+                height: 320px;              
+            }
+            @media (min-width:992px) and (max-width: 1019px) {
+                height: 340px;              
+            }
         }
         .no-card {
             margin-top: 1.5%;
@@ -903,7 +931,40 @@ body {
                         color:#000000;
                         background-color:#ffffff;
                         .size-card {
+                            text-align: left !important;
                             height: 100%;
+                            display: grid;
+                            grid-template-columns: 1fr 3fr 1fr;
+                            grid-template-areas:
+                            "a b c"
+                            "d d d";
+                            grid-gap: 10px;
+                            .l-img {
+                                grid-area: a;
+                                margin-top: 40%;
+                                margin-left: 15%;
+                            }
+                            .heading {
+                                grid-area: b;
+                                display: block;
+                                margin-top: -5%;
+                                margin-top: 13%;
+                                margin-left: 5%;
+                                h6 {
+                                    margin-top: -5%;
+                                }
+                            }
+                            .r-img {
+                                grid-area: c;
+                                margin-top: 20%;
+                            }
+                            p {
+                                grid-area: d;
+                                margin-bottom: 10%;
+                                margin-top: 3%;
+                                margin-right: 18%;
+                                margin-left: 3%;
+                            }
                         }
                         .card {
                             box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
