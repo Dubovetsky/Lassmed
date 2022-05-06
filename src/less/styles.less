@@ -124,24 +124,17 @@ body {
 
 // Cards style
     .cards {
-        // padding: 3%;
         .card {
             display: grid;
             grid-template-columns: 1fr;
             grid-template-areas:
             "a"
             "b";
-            // display: flex;
             margin: 2%;
-            // text-align:left;
             color: #000000;
             text-decoration: none;
             padding: 2%;
             min-height: 300px;
-
-            // background:url(../image/section-5/line-bg.svg);
-            // background-size: cover;
-            
             background-color: #ffffff;
             box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
@@ -410,6 +403,14 @@ body {
         .img-responsive {
             display: initial;
         }
+        @media (min-width: 992px ) and (max-width: 1023px) {
+            .md-card {
+                min-height: 446px;
+            }
+            .sm-card {
+                min-height: 420;
+            }
+        }
         @media (max-width: 991px) {
             display: block;
             .desktop-hidden{
@@ -445,8 +446,6 @@ body {
 
 // Section 3 l-img
     .section-3 {
-        // max-height: 474px;
-        // margin-bottom: 10%;
         .left-col {
             margin-left: 5%;
             margin-top: -15%;
@@ -642,17 +641,13 @@ body {
     .section-6-top {
         padding-top: 5%;
         background: #F8F8F8;
-        // display: flex;
         padding-left: 3%;
         padding-bottom: 2%;
         padding-right: 2%;
         .right-col{
-            // float: right;
             padding-left: 5%;
             text-align: center;
-            // margin-right: 10%;
             .module-over {
-                // background-color:#00C170;
                 filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.12));
                 position: absolute;
                 margin-top: -20%;
@@ -798,6 +793,10 @@ body {
             align-self: center;
             justify-self: center;
         }
+        @media (max-width: 991px) {
+            display: block;
+            text-align: center;
+        }
     }
 
 // Section 7 slider
@@ -840,7 +839,7 @@ body {
                 display: grid;
                 grid-template-columns: repeat(8,1fr);
                 grid-template-areas:
-                "a a b b b c e f"
+                "a m b b b c e f"
                 "d d d d d d d d"
                 "d d d d d d d d";
                 grid-gap: 10px;
@@ -898,7 +897,6 @@ body {
                     width: 100%;
                     margin-left: -1%;
                     .slider__item {
-                        // max-height: 20%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -918,6 +916,12 @@ body {
                         .slider__item {
                           flex: 0 0 100%;
                           max-width: 100%;
+                        }
+                        .ind-grid {
+                            grid-area: c;
+                        }
+                        .text-grid {
+                            grid-area: m;
                         }
                     }
                     @media (min-width: 992px) {
@@ -954,11 +958,19 @@ body {
                     width: 8px;
                     height: 8px;
                 }
+                @media (max-width: 991px) {
+                    grid-area: c;
+                }
             }
             .text-grid {
                 grid-area: a;
+                margin-left: 75%;
                 align-self: center;
                 justify-self: center;
+                @media (max-width: 991px) {
+                    grid-area: m;
+                    margin-left: 0;
+                }
             }
         }        
     }
@@ -1132,6 +1144,11 @@ body {
             margin-top: 8%;
             position: absolute;
         }
+        @media (max-width: 600px) {
+            .modal-module {
+                display: none;
+            }
+        }
     }
     
 
@@ -1182,6 +1199,12 @@ body {
                 font-size: 18px;
                 line-height: 24px;
             }
+            @media (min-width: 600px) and (max-width: 991px) {
+                display: flex;
+                .center {
+                    margin-left: 35%;
+                }
+            }
         }
         @media (max-width: 991px) {
             .mobile-hidden{
@@ -1208,7 +1231,7 @@ body {
                 text-align: center;
                 color: #000000;
                 padding-bottom: 1%;
-            }
+                }
         }
     }
 }
