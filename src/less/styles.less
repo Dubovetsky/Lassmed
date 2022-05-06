@@ -103,7 +103,8 @@ body {
             }
             @media (max-width: 767px) {
                 .navbar-right {
-                    padding-left: 8%;
+                    text-align: right;
+                    padding-right: 2%;
                 }
                 .logo {
                     margin-left: 5%;
@@ -459,6 +460,9 @@ body {
 
 // Section 3 l-img
     .section-3 {
+        @media (max-width: 991px) {
+            text-align: center;
+        }
         .left-col {
             margin-left: 5%;
             margin-top: -15%;
@@ -519,7 +523,7 @@ body {
                 max-width: 100%;
                 img {
                     margin-top: 25%;
-                    margin-left: 9%;
+                    display: unset;
                 }
             }
             .right-col {
@@ -537,6 +541,9 @@ body {
 
 // Section 4 jumbotron
     .section-4 {
+        button:hover {
+            background-color: #f0f0f0;
+        }
         .left-col{
             h1 {
                 font-weight: 600;
@@ -580,6 +587,9 @@ body {
             }
             @media (min-width:992px) and (max-width: 1019px) {
                 height: 340px;              
+            }
+            @media (max-width:991px) {
+                border-bottom: none;                
             }
         }
         .no-card {
@@ -1216,6 +1226,9 @@ body {
     // Footer
     footer {
         .foot-main {
+            img {
+                padding-top: 0;
+            }
             .left {
                 padding-left: 4%;
             }
